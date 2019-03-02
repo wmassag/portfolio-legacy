@@ -2,8 +2,6 @@ import React from "react"
 
 require("./style.scss")
 
-import Initial from "../../components/Initial/"
-
 export default class Layout extends React.Component {
   constructor(props){
     super(props)
@@ -13,9 +11,7 @@ export default class Layout extends React.Component {
   
   render(){
     return(
-      <div id="__Layout">
-        <Initial />
-      </div>
+      <div id="__initial">W</div>
     )
   }
 }
