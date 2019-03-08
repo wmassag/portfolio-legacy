@@ -1,0 +1,34 @@
+#__Page {
+  
+  @keyframes attention {
+    50% {
+      bottom: 2rem;
+    }
+    52% {
+      bottom: 1rem;
+    }
+    55% {
+      bottom: 1.5rem;
+    }
+    57% {
+      bottom: 1rem;
+    }
+    60% {
+      bottom: 2rem;
+    }
+  }
+  
+  display: block;
+  width: 2rem;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  transition-timing-function: ease-out;
+  animation: attention 8s infinite;
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

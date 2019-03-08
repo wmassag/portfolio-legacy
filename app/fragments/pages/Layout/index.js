@@ -1,8 +1,9 @@
 import React from "react"
+import {HashRouter as Router, Route} from "react-router-dom"
 
 require("./style.scss")
 
-import Initial from "../../components/Initial/"
+import Splash from "../Splash/"
 
 export default class Layout extends React.Component {
   constructor(props){
@@ -14,7 +15,11 @@ export default class Layout extends React.Component {
   render(){
     return(
       <div id="__Layout">
-        <Initial />
+        <Router>
+          <Route exact path="/">
+            <Splash />
+          </Route>
+        </Router>
       </div>
     )
   }
