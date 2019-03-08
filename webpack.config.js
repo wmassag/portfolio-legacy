@@ -29,6 +29,7 @@ module.exports = {
       //loader for images
       {
         test: /\.(gif|jpe?g|svg)$/i,
+        exclude: /static/,
         use: [
           'file-loader',
           {
