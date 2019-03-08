@@ -7,14 +7,55 @@
   		html, body {
     		margin: 0;
     		padding: 0;
-  		}
-  		#app {
+    		background-color: #14131c;
+    		background-image: url('./static/deepfield.png');
+    		background-position: center center;
+    		background-attachment: fixed;
+    		
+    		min-width: 100vw;
     		width: 100vw;
+    		min-height: 100vh;
     		height: 100vh;
+    		
+    		color: white;
+        perspective: 100px;
   		}
+  		
+  		#paralax1, #paralax2 {
+    		min-width: 4096px;
+    		width: 100vw;
+    		min-height: 4096px;
+    		height: 100vh;
+    		
+        position: fixed;
+        top: 50%;
+        left: 50%;
+
+    		background-position: center center;
+  		}
+  		@media screen and (min-width: 4097px),
+  		@media screen and (min-height: 4097px) {
+    		body,
+    		#paralax1,
+    		#paralax2 {
+      		background-size: cover;
+    		}
+  		}
+  		
+  		#paralax1 {
+    		background-image: url('./static/redshifted.png');
+    		transform: translate3d(-50%, -50%, -100px) scale(2);
+  		}
+  		#paralax2 {
+    		background-image: url('./static/blueshifted.png');
+    		transform: translate3d(-50%, -50%, -50px) scale(1.5);
+  		}
+  		
 		</style>
 	</head>
 	<body>
+    <div id="paralax1"></div>
+    <div id="paralax2"></div>
     <div id="app">
       <!-- app -->
     </div>
