@@ -1,20 +1,26 @@
 #__Page {
   
   @keyframes attention {
+    0% {
+      bottom: 2rem
+    }
     50% {
-      bottom: 2rem;
+      bottom: 2rem
     }
     52% {
-      bottom: 1rem;
+      bottom: 1rem
     }
     55% {
-      bottom: 1.5rem;
+      bottom: 1.5rem
     }
     57% {
-      bottom: 1rem;
+      bottom: 1rem
     }
     60% {
-      bottom: 2rem;
+      bottom: 2rem
+    }
+    100% {
+      bottom: 2rem
     }
   }
   
