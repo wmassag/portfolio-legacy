@@ -1,11 +1,55 @@
+@import '../../../_globalSCSSVars.scss';
+
 #__Splash {
+  $titleFontSizeDesktop: 6rem;
+  
+  outline: solid 1px blue;
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  
+  width: calc(100vw - 80px);
+  margin: 0 40px;
+  @media screen and (max-width: $tabletMinWidth) {
+    width: calc(100vw - 40px);
+    margin: 0 20px;
+  }
+  
+  height: calc(100vh - 100px);
+  
   .content {
+    outline: solid 1px red;
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  h1.title {
+    font-family: "AvenirNext-Bold", "Avenir Next", "Helvetica Now", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: bold;
+    font-weight: 700;
+    color: #FCFAFA;
+    letter-spacing: -2px;
+    line-height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    font-size: 6rem;
+    @media screen and (max-width: 414px) {
+      font-size: 4rem;
+    }
+  }
+  p.subtitle {
+    font-family: "FuturaPT-Medium", "Futura PT", "Futura", "Proxima Nova", sans-serif;
+    font-weight: normal;
+    font-weight: 400;
+    color: #FCFAFA;
+    letter-spacing: -1.24px;
+    text-align: center;
+
+    font-size: 3.6rem;
+    @media screen and (max-width: 414px) {
+      font-size: 1.5rem;
+    }
   }
 }

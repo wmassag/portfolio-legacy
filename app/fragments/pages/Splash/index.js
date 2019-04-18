@@ -15,10 +15,9 @@ export default class Layout extends React.Component {
     return(
       <div id="__Splash">
         <div className="content">
-          <h1 className="title">Welcome!</h1>
-          <p className="title">I do digital design.</p>
+          <h1 className="title">Hi!</h1>
+          <p className="subtitle">I am Wenzel Massag, I design and code.</p>
         </div>
-        <Page />
       </div>
     )
   }
