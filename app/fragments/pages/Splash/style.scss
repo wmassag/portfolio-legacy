@@ -1,9 +1,6 @@
 @import '../../../_globalSCSSVars.scss';
 
 #__Splash {
-  $titleFontSizeDesktop: 6rem;
-  
-  outline: solid 1px blue;
   position: relative;
   
   width: calc(100vw - 80px);
@@ -13,14 +10,13 @@
     margin: 0 20px;
   }
   
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
   
   .content {
-    outline: solid 1px red;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -20%);
     width: 100%;
   }
   h1.title {
@@ -34,9 +30,12 @@
     padding: 0;
     text-align: center;
 
-    font-size: 6rem;
-    @media screen and (max-width: 414px) {
-      font-size: 4rem;
+    font-size: $titleFontSizeDesktop;
+    @media screen and (max-width: $mobileMinWidth), screen and (max-height: 415px) {
+      /*
+        max-height limits small font to phone, but allows larger font on tablets running in multi-tasking mode
+      */
+      font-size: $titleFontSizeMobile;
     }
   }
   p.subtitle {
@@ -47,9 +46,9 @@
     letter-spacing: -1.24px;
     text-align: center;
 
-    font-size: 3.6rem;
-    @media screen and (max-width: 414px) {
-      font-size: 1.5rem;
+    font-size: 2.77rem;
+    @media screen and (max-width: $mobileMinWidth), screen and (max-height: 415px) {
+      font-size: 1.3905rem;
     }
   }
 }
