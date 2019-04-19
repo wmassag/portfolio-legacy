@@ -1,8 +1,28 @@
 #app {
   font-family: "FuturaPT", "Futura PT", "futura-pt", "Futura", "Proxima Nova", sans-serif;
+  /*
+    FuturaPT and Futura PT => Native fonts
+    futura-pt => Typekit fonts
+
+    for content blocking clients:
+    Futura => native fallback
+    Proxima Nova => native fallback
+    sans-serif => this is an emergency
+  */
+  
   @for $headerLevel from 1 through 6 {
     h#{$headerLevel} {
-      font-family: "AvenirNext-Bold", "Avenir Next", "Helvetica Now", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      font-family: "AvenirNext-Bold", "Avenir Next", "Avenir", "Helvetica Now", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      /*
+        AvenirNext-Bold => For people with the full font natively installed
+        Avenir Next => For people with some version of it
+        Avenir => native fallback
+        Helvetica Now => For designers with no Avenir
+        Helvetica Neue => Windows
+        Helvetica => old computers
+        Arial => emergency
+        sans-serif => Just, WTF!?
+      */
       font-weight: bold;
       font-weight: 700;
       letter-spacing: -2px;
