@@ -12,7 +12,7 @@ export default class Layout extends React.Component {
   render(){
     return(
       <div id="__blueprint">
-        Copmonent Name should be wrapper ID and needs to be updated in style.scss
+        Copmonent Name should be wrapper ID/class and needs to be updated in style.scss. Pages may use IDs, components must use classes.
       </div>
     )
   }
