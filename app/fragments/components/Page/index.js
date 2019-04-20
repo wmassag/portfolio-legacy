@@ -12,7 +12,7 @@ export default class Layout extends React.Component {
   
   render(){
     return(
-      <div id="__Page">
+      <div className="__Page">
         <Link to="/">
           <img src={pageShape} alt="page down" title="page down" />
         </Link>
