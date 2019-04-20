@@ -2,9 +2,6 @@ import React from "react"
 
 require("./style.scss")
 
-import Splash from "../Splash/"
-import Card from "../../components/Card/"
-
 export default class Layout extends React.Component {
   constructor(props){
     super(props)
@@ -14,9 +11,8 @@ export default class Layout extends React.Component {
   
   render(){
     return(
-      <div id="__Layout">
-        <Splash />
-        <Card />
+      <div className="__Card">
+        Copmonent Name should be wrapper ID and needs to be updated in style.scss
       </div>
     )
   }
