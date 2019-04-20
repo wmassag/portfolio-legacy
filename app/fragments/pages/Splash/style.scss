@@ -26,18 +26,12 @@
     text-align: center;
 
     font-size: $titleFontSizeDesktop;
-    @media screen and (max-width: $mobileMinWidth), screen and (max-height: 415px) {
-      /*
-        max-height limits small font to phone, but allows larger font on tablets running in multi-tasking mode
-      */
-      font-size: $titleFontSizeMobile;
-    }
   }
   p.subtitle {
     color: $primaryBright;
     text-align: center;
 
-    font-size: 2.77rem;
+    font-size: 2.78rem;
     @media screen and (max-width: $mobileMinWidth), screen and (max-height: 415px) {
       font-size: 1.3905rem;
     }
