@@ -1,3 +1,5 @@
+@import "../../../_globalSCSSVars.scss";
+
 .__Card {
   background: #FCFAFA;
   box-shadow: 3px 5px 27px 0 rgba(0,0,0,0.33);
@@ -9,6 +11,9 @@
     /*
       center on wide screens, keep 40px margin on narrow displays
     */
-    margin: 0 auto 100px 40px;
+    margin: 0 40px 100px 40px;
+  }
+  @media screen and (max-width: $mobileMinWidth) {
+    margin: 0 0 50px 0;
   }
 }
