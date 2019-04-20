@@ -20,12 +20,7 @@
     width: 100%;
   }
   h1.title {
-    font-family: "AvenirNext-Bold", "Avenir Next", "Helvetica Now", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    font-weight: bold;
-    font-weight: 700;
-    color: #FCFAFA;
-    letter-spacing: -2px;
-    line-height: 100%;
+    color: $primaryBright;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -39,11 +34,7 @@
     }
   }
   p.subtitle {
-    font-family: "FuturaPT-Medium", "Futura PT", "Futura", "Proxima Nova", sans-serif;
-    font-weight: normal;
-    font-weight: 400;
-    color: #FCFAFA;
-    letter-spacing: -1.24px;
+    color: $primaryBright;
     text-align: center;
 
     font-size: 2.77rem;

@@ -9,6 +9,8 @@
     Proxima Nova => native fallback
     sans-serif => this is an emergency
   */
+  letter-spacing: -1.24px;
+
   
   @for $headerLevel from 1 through 6 {
     h#{$headerLevel} {
