@@ -51,6 +51,7 @@
     margin: 0 0 0 1rem;
     padding: 0 0 1em 0;
   }
+  
   button,
   input[type="button"],
   input[type="submit"],
@@ -64,14 +65,31 @@
     padding: 0.5em 1em;
     border-radius: 5px;
     -webkit-appearance: button;
+    transition-timing-function: cubic-bezier(.1,.5,0,.85);
+    transition-duration: 750ms;
+    transition-property: transform;
+    
+    &:hover, &:focus {
+      box-shadow: 0 0 6px rgba($colorFoundationDarkShaded, .33);
+      transform: scale(1.075);
+      transition-duration: 200ms;
+      transition-timing-function: cubic-bezier(.25,2.5,.5,.5);
+    }
+
     &.bright {
       background: $colorFoundationBrightShaded;
       color: $colorFoundationDarkShaded;
+      &:hover, &:focus {
+        box-shadow: 0 0 6px rgba($colorFoundationDarkShaded, .24);
+      }
     }
     &.dark {
       /*
         default
       */
+    }
+    &:hover, &:focus {
+      
     }
   }
   input::-moz-focus-inner,
