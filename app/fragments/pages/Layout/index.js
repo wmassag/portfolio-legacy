@@ -18,6 +18,7 @@ export default class Layout extends React.Component {
         <Splash />
         <Card
           title="Proximity"
+          externalURL="http://"
           
           imageURL="static/proximity/render.png"
           imageAlt="A rendered mockup of Proximity on iPhone"

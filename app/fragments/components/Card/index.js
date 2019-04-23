@@ -31,7 +31,7 @@ export default class Layout extends React.Component {
             {(this.props.externalURL) ?
               <div className="buttonGroup">
                 <button>details</button>
-                <button>visit</button>
+                <button className="bright">visit</button>
               </div>
             :
                 <div className="buttonGroup">

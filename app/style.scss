@@ -51,4 +51,32 @@
     margin: 0 0 0 1rem;
     padding: 0 0 1em 0;
   }
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    background: $colorFoundationDarkShaded;
+    border: 0; border: none;
+    color: $colorFoundationBright;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    -webkit-appearance: button;
+    &.bright {
+      background: $colorFoundationBrightShaded;
+      color: $colorFoundationDarkShaded;
+    }
+    &.dark {
+      /*
+        default
+      */
+    }
+  }
+  input::-moz-focus-inner,
+  button::-moz-focus-inner {
+    border: 0; border: none;
+    padding: 0;
+  }
 }
