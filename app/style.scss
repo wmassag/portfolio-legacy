@@ -30,12 +30,52 @@
       font-weight: 700;
       letter-spacing: -2px;
       line-height: 100%;
+
       font-size: #{1 + (6 - $headerLevel) * 0.7}rem;
       /*
         Will compute to h1 at 4.5 rem and h6 at 1 rem, linear
       */
+      
+      transition-property: font-size;
+      transition-timing-function: ease-out;
+      transition-duration: 125ms;
     }
   }
+  
+  @media screen and (max-width: $desktopMinWidth) {
+    @for $headerLevel from 1 through 6 {
+      h#{$headerLevel} {
+        font-size: #{1 + (6 - $headerLevel) * 0.5}rem;
+        /*
+          Will compute to h1 at 3.5 rem and h6 at 1 rem, linear
+        */
+      }
+    }  
+  }
+
+  @media screen and (max-width: $tabletMinWidth) {
+    @for $headerLevel from 1 through 6 {
+      h#{$headerLevel} {
+        font-size: #{1 + (6 - $headerLevel) * 0.1}rem;
+        /*
+          Will compute to h1 at 3.5 rem and h6 at 1 rem, linear
+        */
+      }
+    }  
+  }
+  
+  @media screen and (max-width: $mobileMinWidth) {
+    @for $headerLevel from 1 through 6 {
+      h#{$headerLevel} {
+        font-size: #{1 + (6 - $headerLevel) * 0.237}rem;
+        /*
+          Will compute to h1 at 1.95 rem and h6 at 1 rem, linear
+        */
+      }
+    }  
+  }
+
+  
   .noWrap {
     white-space: nowrap;
   }
