@@ -3,11 +3,11 @@
 #__Splash {
   position: relative;
   
-  width: calc(100vw - 80px);
-  margin: 0 40px;
-  @media screen and (max-width: $tabletMinWidth) {
-    width: calc(100vw - 40px);
-    margin: 0 20px;
+  width: calc(100vw - 40px);
+  margin: 0 20px;
+  @media screen and (min-width: $tabletBreakpoint) {
+    width: calc(100vw - 80px);
+    margin: 0 40px;
   }
   
   min-height: calc(100vh - 80px);
@@ -31,9 +31,9 @@
     color: $primaryBright;
     text-align: center;
 
-    font-size: 2.78rem;
-    @media screen and (max-width: $mobileMinWidth), screen and (max-height: $mobileMinHeight) {
-      font-size: 1.3905rem;
+    font-size: 1.3905rem;
+    @media screen and (min-width: $tabletBreakpoint) {
+      font-size: 2.78rem;
     }
   }
 }

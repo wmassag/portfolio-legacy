@@ -1,69 +1,68 @@
 @import "../../../_globalSCSSVars.scss";
-
-.__Card {
-  background: #FCFAFA;
-  box-shadow: 3px 5px 27px 0 rgba(0,0,0,0.33);
-  border-radius: 11px;
-  max-width: 866px;
-  min-height: 535px;
-  margin: 0 auto 100px auto;
-  @media screen and (max-width: 946px) {
+#app {
+  .__Card {
+    border-radius: 11px;
+    max-width: 866px;
+    min-height: 535px;
+    position: relative;
+    overflow: hidden;
+    
     /*
       center on wide screens, keep 40px margin on narrow displays
     */
-    margin: 0 40px 100px 40px;
-  }
-  @media screen and (max-width: $mobileMinWidth) {
     margin: 0 0 50px 0;
-  }
+    @media screen and (min-width: $tabletBreakpoint) {
+      margin: 0 40px 100px 40px;
+    }
+    @media screen and (min-width: 946px) {
+      margin: 0 auto 100px auto;
+    }
   
-  position: relative;
-  overflow: hidden;
-  .imageContainer {
-    position: absolute;
-    top: 0;
-    right: 50%;
-    bottom: 0;
-    left: 0;
-    
-    @media screen and (max-width: $mobileMinWidth), screen and (max-height: $mobileMinHeight) {
-      /*
-        on phones, even in landscape, show different layout
-      */
-    }
-
-    .shapedShadow {
-      background-color: rgba(0, 0, 0, 0.15);
-      box-shadow: inset 0 0 32px 32px $colorFoundationBright, inset 0 0 1px 1px $colorFoundationBright;
-      /*
-        second box shadow needed to remove unwanted outline/edge due to border-radius
-      */
-      border-radius: 15%;
-      img {
-        margin: 40px;
-        width: calc(100% - 80px);
-        height: auto;
+    /*
+      Flow mobile different than larger
+    */  
+    @media screen and (min-width: $tabletBreakpoint) {
+      background: #FCFAFA;
+      box-shadow: 3px 5px 27px 0 rgba(0,0,0,0.33);
+      h2 {
+        margin-bottom: 20px;
       }
-    }
-  }
-  .content {
-    margin: 0px 0px 0px 50%;
-    padding: 40px;
-    @media screen and (max-width: $mobileMinWidth), screen and (max-height: $mobileMinHeight) {
-      /*
-        on phones, even in landscape, show different layout
-      */
-    }
-    h2 {
-      line-height: 100%;
-      margin: 0 0 40px 0;
-      padding: 0;
-    }
-    .buttonGroup {
-      width: 100%;
-      button {
-        min-width: 33.33%;
-        margin: 0 10px;
+      
+      .imageContainer {
+        position: absolute;
+        top: 0;
+        right: 50%;
+        bottom: 0;
+        left: 0;
+      }
+      
+      .shapedShadow {
+        background-color: rgba(0, 0, 0, 0.15);
+        box-shadow: inset 0 0 32px 32px $colorFoundationBright, inset 0 0 1px 1px $colorFoundationBright;
+        /*
+          second box shadow needed to remove unwanted outline/edge due to border-radius
+        */
+        border-radius: 15%;
+  
+        img {
+          margin: 40px;
+          width: calc(100% - 80px);
+          height: auto;
+        }
+      }
+      
+      .content {
+        margin: 0px 0px 0px 50%;
+        padding: 40px;
+  
+        .buttonGroup {
+          width: 100%;
+  
+          button {
+            min-width: 33.33%;
+            margin: 0 10px;
+          } 
+        } 
       }
     }
   }
