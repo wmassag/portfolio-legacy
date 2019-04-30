@@ -10,7 +10,10 @@
     margin: 0 40px;
   }
   
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 120px);
+  @media screen and (min-width: $tabletBreakpoint) {
+    min-height: calc(100vh - 80px);
+  }
   
   .content {
     position: absolute;
