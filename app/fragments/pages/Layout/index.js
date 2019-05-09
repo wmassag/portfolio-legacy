@@ -4,6 +4,7 @@ require("./style.scss")
 
 import Splash from "../Splash/"
 import Card from "../../components/Card/"
+import Vita from "../../components/Vita"
 
 export default class Layout extends React.Component {
   constructor(props){
@@ -27,6 +28,7 @@ export default class Layout extends React.Component {
           
           metaList={["UX Concept", "iOS UI", "Sketch, Adobe After Effects"]}
         />
+        <Vita />
       </div>
     )
   }

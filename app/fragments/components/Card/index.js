@@ -2,7 +2,7 @@ import React from "react"
 
 require("./style.scss")
 
-export default class Layout extends React.Component {
+export default class Card extends React.Component {
   constructor(props){
     super(props)
     
