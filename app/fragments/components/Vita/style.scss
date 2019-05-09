@@ -1,0 +1,15 @@
+@import "../../../_globalSCSSVars.scss";
+
+.__Vita {
+  background-color: $colorFoundationBright;
+  box-sizing: border-box;
+  padding: 50px 0;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .content, h2.title {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}

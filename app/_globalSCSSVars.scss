@@ -18,3 +18,6 @@ $secondaryDark: $colorFoundationDark;
 
 $colorFoundationDarkShaded: #545050;
 $primaryDark: $colorFoundationDarkShaded;
+
+$colorContrastBase: #A61B14;
+$colorContrastInteraction: lighten($colorContrastBase, 15%);

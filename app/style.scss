@@ -60,10 +60,22 @@
     font-weight: 700;
   }
   p {
-    line-height: 1.3em;
+    line-height: 1.618em;
     padding: 0 0 1em 0;
     margin: 0;
+    letter-spacing: 1px;
   }
+  
+  a {
+    text-decoration: none;
+    &:link, &:visited {
+      color: $colorContrastBase;
+    }
+    &:active, &:hover, &:focus {
+      color: $colorContrastInteraction;
+    }
+  }
+  
   ul {
     margin: 0 0 0 1rem;
     padding: 0 0 1em 0;
