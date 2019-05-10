@@ -14,7 +14,13 @@ export default class Card extends React.Component {
       <div className="__Card">
         <div className="imageContainer">
           <div className="shapedShadow">
-            <img alt={this.props.imageAlt} src={this.props.imageURL} />
+            {
+              (this.props.imageClassName) ? 
+                <img alt={this.props.imageAlt} src={this.props.imageURL} className={this.props.imageClassName} />
+              :
+                <img alt={this.props.imageAlt} src={this.props.imageURL} />
+            }
+            
           </div>
         </div>
         <div className="content">

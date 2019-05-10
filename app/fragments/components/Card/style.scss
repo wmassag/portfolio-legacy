@@ -44,6 +44,14 @@
           width: 100%;
           max-width: 354px;
           height: auto;
+          
+          @media screen and (max-width: 469px) {
+            &.iPhoneMockup {
+              max-width: none;
+              width: 113.5%;
+              margin-left: -6.8%;
+            }
+          }
         }
       }
     }
@@ -53,6 +61,8 @@
       margin-top: 360px;
       padding: 40px;
       background: $colorFoundationBright;
+      border-radius: 11px;
+      box-shadow: 0 0 11px rgba(0, 0, 0, 0.3);
       
       .buttonGroup {
         width: 100%;
@@ -99,6 +109,8 @@
         box-sizing: border-box;
         min-height: 536px;
         position: relative;
+        box-shadow: none;
+        border-radius: none; /* accelerates rendering, invisible */
         
         .buttonGroup {
           position: absolute;
