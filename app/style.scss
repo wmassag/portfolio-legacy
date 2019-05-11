@@ -61,8 +61,8 @@
   }
   p {
     line-height: 1.618em;
-    padding: 0 0 1em 0;
-    margin: 0;
+    padding: 0;
+    margin: 1em 0 1em 0;
     letter-spacing: 1px;
   }
   
@@ -77,8 +77,11 @@
   }
   
   ul {
-    margin: 0 0 0 1rem;
-    padding: 0 0 1em 0;
+    margin: 1em 0 1em 1em;
+    padding: 0;
+  }
+  p + ul {
+    margin-top: -1em;
   }
   
   button,
