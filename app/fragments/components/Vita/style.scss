@@ -36,13 +36,17 @@
   }
   
   @media screen and (min-width: $mobileBreakpoint) {
+    .limiter {
+      max-width: $tabletBreakpoint;
+      margin: 0 auto;
+    }
     .imageContainer {
       width: 33%;
       height: 53vw;
       max-width: 269px;
       max-height: 435px;
       
-      margin: 0 40px 20px 40px;
+      margin: 0 40px 10px 40px;
       float: left;
       overflow: hidden;
       border-radius: 11px;
