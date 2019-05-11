@@ -15,8 +15,8 @@ export default class Card extends React.Component {
         <div className="imageContainer">
           <div className="shapedShadow">
             {
-              (this.props.imageClassName) ? 
-                <img alt={this.props.imageAlt} src={this.props.imageURL} className={this.props.imageClassName} />
+              (this.props.imageType === "iPhoneMockup") ? 
+                <img alt={this.props.imageAlt} src={this.props.imageURL} className="iPhoneMockup" />
               :
                 <img alt={this.props.imageAlt} src={this.props.imageURL} />
             }
@@ -45,7 +45,7 @@ export default class Card extends React.Component {
                 </div>
             }
         </div>
-        {(this.props.imageFader === "yes") ? <div className="fader"></div> : "" }
+        {(this.props.imageType === "iPhoneMockup") ? <div className="fader"></div> : "" }
       </div>
     )
   }

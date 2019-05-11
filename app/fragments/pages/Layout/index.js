@@ -23,8 +23,7 @@ export default class Layout extends React.Component {
           
           imageURL="static/proximity/render.png"
           imageAlt="A rendered mockup of Proximity on iPhone"
-          imageClassName="iPhoneMockup"
-          imageFader="yes"
+          imageType="iPhoneMockup"
           
           description="A location based social network, designed to connect locally. This social network connects people with their physical surroundings and the people near them."
           
