@@ -4,12 +4,61 @@
   background-color: $colorFoundationBright;
   box-sizing: border-box;
   padding: 50px 0;
-  img {
+  overflow: auto;
+  
+  .imageContainer {
     max-width: 100%;
-    height: auto;
+    
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
   }
   .content, h2.title {
     margin-left: 40px;
     margin-right: 40px;
+  }
+  
+  @media screen and (max-width: $mobileBreakpointInside) {
+    .imageContainer {
+      position: relative;
+    }
+    
+    .overlayShadow {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      box-shadow: inset 0 0 17px rgba(0, 0, 0, 0.33);
+    }
+  }
+  
+  @media screen and (min-width: $mobileBreakpoint) {
+    .imageContainer {
+      width: 33%;
+      height: 53vw;
+      max-width: 269px;
+      max-height: 435px;
+      
+      margin: 0 40px 20px 40px;
+      float: left;
+      overflow: hidden;
+      border-radius: 11px;
+      box-shadow: 0 0 17px rgba(0, 0, 0, 0.15);
+      
+      img {
+        width: auto;
+        height: 100%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    
+    .overlayShadow {
+      display: none;
+    }
   }
 }

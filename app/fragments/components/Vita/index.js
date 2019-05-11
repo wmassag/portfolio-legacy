@@ -25,7 +25,10 @@ export default class Vita extends React.Component {
     return(
       <div className="__Vita">
         <h2 className="title">About Me</h2>
-        <img src="static/vita/portrait-2019.jpg" alt="Portrait photo of Wenzel Massag. Year: 2019." />
+        <div className="imageContainer">
+          <img src="static/vita/portrait-2019.jpg" alt="Portrait photo of Wenzel Massag. Year: 2019." />
+          <div className="overlayShadow"></div>
+        </div>
         <section className="content" dangerouslySetInnerHTML={dangerousHTML()} />
       </div>
     )
