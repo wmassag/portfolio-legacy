@@ -45,6 +45,7 @@ export default class Card extends React.Component {
                 </div>
             }
         </div>
+        {(this.props.imageFader === "yes") ? <div className="fader"></div> : "" }
       </div>
     )
   }
