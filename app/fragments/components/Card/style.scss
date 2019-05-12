@@ -96,10 +96,6 @@
         box-sizing: border-box;
         
         @include better-gradient(rgba($colorFoundationBright, 0.0), rgba($colorFoundationBright, 0.75));
-        
-        transition-property: opacity;
-        transition-timing-function: ease-out;
-        transition-duration: 12s;
       }
       
       .imageContainer {
