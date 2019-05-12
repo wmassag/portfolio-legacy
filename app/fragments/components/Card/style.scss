@@ -89,13 +89,20 @@
       .fader {
         position: absolute;
         bottom: 0;
-        left: 40px;
+        left: 0px;
         right: 50%;
         z-index: 1;
-        height: 120px;
-        box-sizing: border-box;
-        
-        @include better-gradient(rgba($colorFoundationBright, 0.0), rgba($colorFoundationBright, 0.75));
+        height: 40px;
+        box-sizing: border-box;        
+        @include better-gradient(rgba($colorFoundationBright, 0.75), rgba($colorFoundationBright, 0.95));
+
+/* !!! */
+        @supports (-webkit-backdrop-filter: blur(5px)) {
+          -webkit-backdrop-filter: blur(5px);
+          @include better-gradient(rgba($colorFoundationBright, 0.45), rgba($colorFoundationBright, 0.65));
+        }
+/* !!! */
+
       }
       
       .imageContainer {
