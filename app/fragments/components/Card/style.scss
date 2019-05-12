@@ -33,7 +33,8 @@
 
         width: 100%;
         box-sizing: border-box;
-        padding-top: 40px;
+        padding-top: 35px;
+        margin-top: 5px;
         text-align: center;
         @media screen and (min-width: 434px) and (max-width: $tabletBreakpointInside) {
           max-width: 434px; /* iPhone Screen + bezel in pixels. This translates to max. width of 100% real world. */
