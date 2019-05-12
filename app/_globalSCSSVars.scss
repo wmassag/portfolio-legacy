@@ -22,3 +22,45 @@ $primaryDark: $colorFoundationDarkShaded;
 
 $colorContrastBase: #A61B14;
 $colorContrastInteraction: lighten($colorContrastBase, 15%);
+
+/*
+  Linear gradient are ugly, this one is better.
+  This gradient simulates an easing function in ten steps.
+  See my codepen: https://codepen.io/unknwntrr/pen/yKMBYZ
+*/
+@function mixColors($colorA, $colorB, $factor) {
+  $hueDifference: hue($colorB) - hue($colorA);
+  $saturationDifference: saturation($colorB) - saturation($colorA);
+  $lightnessDifference: lightness($colorB) - lightness($colorA);
+  $alphaDifference: alpha($colorB) - alpha($colorA);
+  
+  $returnColor: hsla(
+    hue($colorB) - ($hueDifference * $factor),
+    saturation($colorB) - ($saturationDifference * $factor),
+    lightness($colorB) - ($lightnessDifference * $factor),
+    alpha($colorB) - ($alphaDifference * $factor)
+  );
+  @return $returnColor;
+}
+
+@mixin better-gradient($fromColor, $toColor){
+  background: linear-gradient(
+
+    $fromColor 0%,
+    
+    mixColors($fromColor, $toColor, 0.738) 19%,
+    mixColors($fromColor, $toColor, 0.541) 34%,
+    mixColors($fromColor, $toColor, 0.382) 47%,
+    mixColors($fromColor, $toColor, 0.278) 56.5%,
+    mixColors($fromColor, $toColor, 0.194) 65%,
+    mixColors($fromColor, $toColor, 0.126) 73%,
+    mixColors($fromColor, $toColor, 0.075) 80.2%,
+    mixColors($fromColor, $toColor, 0.042) 86.1%,
+    mixColors($fromColor, $toColor, 0.021) 91%,
+    mixColors($fromColor, $toColor, 0.008) 95.2%,
+    mixColors($fromColor, $toColor, 0.002) 98.2%,
+    
+    $toColor 100%
+
+  );
+}
