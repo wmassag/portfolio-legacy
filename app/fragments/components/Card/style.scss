@@ -101,10 +101,6 @@
         transition-timing-function: ease-out;
         transition-duration: 12s;
       }
-      &:hover .fader {
-        opacity: 0;
-        transition-duration: 750ms;
-      }
       
       .imageContainer {
         top: 0;

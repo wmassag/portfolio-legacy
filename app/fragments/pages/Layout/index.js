@@ -25,7 +25,7 @@ export default class Layout extends React.Component {
           imageAlt="A rendered mockup of Proximity on iPhone"
           imageType="iPhoneMockup"
           
-          description="A location based social network, designed to connect locally. This social network connects people with their physical surroundings and the people near them."
+          description="A location based social network, designed to connect people and business locally."
           
           metaList={["UX Concept", "iOS UI", "Sketch, Adobe After Effects"]}
         />
