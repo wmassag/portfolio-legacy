@@ -4,7 +4,7 @@ require("./style.scss")
 
 import Splash from "../Splash/"
 import Card from "../../components/Card/"
-import Vita from "../../components/Vita"
+import Vita from "../../pages/Vita"
 
 export default class Layout extends React.Component {
   constructor(props){

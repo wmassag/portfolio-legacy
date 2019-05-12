@@ -2,7 +2,7 @@
 
 #app {
   .__Card {
-    border-radius: 11px;
+    border-radius: $defaultBorderRadius;
     max-width: 866px;
     position: relative;
     overflow: hidden;
@@ -63,7 +63,7 @@
       margin-top: 360px;
       padding: 40px;
       background: $colorFoundationBright;
-      border-radius: 11px;
+      border-radius: $defaultBorderRadius;
       box-shadow: 0 0 11px rgba(0, 0, 0, 0.3);
       
       .buttonGroup {
@@ -89,6 +89,7 @@
       
       .fader {
         position: absolute;
+        border-bottom-left-radius: $defaultBorderRadius;
         bottom: 0;
         left: 0px;
         right: 50%;

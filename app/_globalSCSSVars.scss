@@ -23,6 +23,8 @@ $primaryDark: $colorFoundationDarkShaded;
 $colorContrastBase: #A61B14;
 $colorContrastInteraction: lighten($colorContrastBase, 15%);
 
+$defaultBorderRadius: 11px;
+
 /*
   Linear gradient are ugly, this one is better.
   This gradient simulates an easing function in ten steps.
