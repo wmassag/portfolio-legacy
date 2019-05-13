@@ -2,18 +2,10 @@
 
 #app {
   .__Card {
-    /*Dev*/
-    *:hover {
-      outline: solid 1px red;
-    }
-    
     /* Positioning */
     position: relative;
     margin: 0 0 50px 0;
     padding-top: 336px;
-    
-    /* Appearance */
-    max-width: $desktopBreakpoint;
     
     .imageContainer {
       /* Placement */
@@ -27,12 +19,19 @@
       
       /* Appearance */
       
-      .shapedShadow {
-        /*
-          Positioning
-        */
+      /* Hacks */
+      text-align: center;
+      
+      
+      img {
         width: 100%;
-        max-width: 434px;
+        height: auto;
+      }
+      
+      .shapedShadow {
+        /* Positioning */
+        display: inline-block;
+        width: 100%;
         box-sizing: border-box;
         padding: 22px 20px;
 
@@ -40,18 +39,9 @@
         background: darken(desaturate($colorFoundationDark, 100%), 15%);
         box-shadow: inset 0 0 22px 22px $colorFoundationDark, inset 0 0 1px 1px $colorFoundationDark; //second box shadow needed to remove unwanted outline/edge due to border-radius
 
-        $iPhoneMockupradius: 54px;
+        $iPhoneMockupradius: 73px;
         border-top-left-radius: $iPhoneMockupradius;
         border-top-right-radius: $iPhoneMockupradius;
-
-        /* Hacks */
-        text-align: center;
-        
-        img {
-          width: 100%;
-          margin: 0;
-          height: auto;
-        }
       }
     }
     .content {
@@ -64,7 +54,7 @@
       @include contentPadding;
       background: $colorFoundationBright;
       border-radius: $defaultBorderRadius;
-      @include defaultBoxShadow;
+      @include nonresponsiveBoxShadowMobile;
       
       .buttonGroup {
         width: 100%;
@@ -76,61 +66,94 @@
         } 
       }
     }
-  
+
+
     /*
-      Flow mobile different than larger
-    */  
-    @media screen and (min-width: $tabletBreakpoint) {
-      background: $colorFoundationBright;
-      box-shadow: 3px 5px 27px 0 rgba(0,0,0,0.33);
-      h2 {
-        margin-bottom: 20px;
+     * Wider than a phone in portrait:
+     */
+
+    @media screen and (min-width: $mobileBreakpoint) {
+      .shapedShadow {
+        padding: 40px 38px;
       }
+      .content {
+        margin: 0 $tabletInset;
+      }
+    }
+
+
+    /*
+     * Wider than the average tablet in portrait
+     */
+
+    @media screen and (min-width: $tabletBreakpoint) {
+      /* Placement */
+      margin: 0 $desktopInset 150px $desktopInset;
       
+      /* Appearance */
+      overflow: hidden;
+      background: $colorFoundationBright;
+      padding: 0;
+      border-radius: $defaultBorderRadius;
+      @include nonresponsiveBoxShadowTablet;
+
       .fader {
+        /* Placement */
         position: absolute;
-        border-bottom-left-radius: $defaultBorderRadius;
         bottom: 0;
         left: 0px;
         right: 50%;
         z-index: 1;
+        
+        /* Appearance */
+        border-bottom-left-radius: $defaultBorderRadius;
         height: 40px;
         box-sizing: border-box;        
-        @include better-gradient(rgba($colorFoundationBright, 0.75), rgba($colorFoundationBright, 0.95));
-
-/* !!! */
+        @include better-gradient(
+          rgba($colorFoundationBright, 0.75),
+          rgba($colorFoundationBright, 0.95)
+        );
         @supports (-webkit-backdrop-filter: blur(5px)) {
           -webkit-backdrop-filter: blur(5px);
-          @include better-gradient(rgba($colorFoundationBright, 0.45), rgba($colorFoundationBright, 0.65));
+          @include better-gradient(
+            rgba($colorFoundationBright, 0.45),
+            rgba($colorFoundationBright, 0.65)
+          );
         }
-/* !!! */
-
       }
       
       .imageContainer {
+        /* Placement */
         top: 0;
         right: 50%;
         bottom: 0;
         left: 0;
         width: 50%;
-
+        
+        /* Appearance */
+        overflow: visible;
+        
         .shapedShadow {
+          /* Appearance */
+          width: calc(100% + 38px);
+          padding: 40px 38px;
           background: darken(desaturate($colorFoundationBright, 100%), 15%);
-          box-shadow: inset 0 0 32px 32px $colorFoundationBright, inset 0 0 1px 1px $colorFoundationBright;
-          
-          img {
-            width: calc(100% - 80px);
-            height: auto;
-          }
+          box-shadow:
+            inset 0 0 32px 32px $colorFoundationBright,
+            inset 0 0 1px 1px $colorFoundationBright;
         }
       }
       
       .content {
-        margin: 0px 0px 0px 50%;
+        /* Placement */
+        position: relative;
+        margin: 0 0 0 50%;
+        
+        /* Appearance */
         padding-bottom: 80px;
         box-sizing: border-box;
         min-height: 536px;
-        position: relative;
+        background: transparent;
         box-shadow: none;
         border-radius: none; /* accelerates rendering, invisible */
         
@@ -140,6 +163,15 @@
           text-align: left;
         }
       }
+    }
+    
+    @media screen and (min-width: $desktopBreakpoint) {
+      /* Appearance */
+      max-width: $desktopBreakpoint;
+    }
+    @media screen and (min-width: #{$desktopBreakpoint + $desktopInset}) {
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
