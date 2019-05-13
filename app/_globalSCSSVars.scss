@@ -25,6 +25,9 @@ $colorContrastInteraction: lighten($colorContrastBase, 15%);
 
 $defaultBorderRadius: 11px;
 $mobileInset: 8px;
+$tabletInset: 40px;
+$desktopInset: 40px;
+
 @mixin contentPadding {
   padding: 30px;
   @media screen and (min-width: $tabletBreakpoint) {
@@ -36,6 +39,12 @@ $mobileInset: 8px;
   @media screen and (min-width: $tabletBreakpoint) {
     box-shadow: 3px 5px 27px 0 rgba(0,0,0,0.33);
   }
+}
+@mixin nonresponsiveBoxShadowMobile {
+  box-shadow: 0 0 11px rgba(0, 0, 0, 0.3);
+}
+@mixin nonresponsiveBoxShadowTablet {
+  box-shadow: 3px 5px 27px 0 rgba(0,0,0,0.33);
 }
 
 /*
