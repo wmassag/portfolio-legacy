@@ -2,69 +2,69 @@
 
 #app {
   .__Card {
-    border-radius: $defaultBorderRadius;
-    max-width: 866px;
-    position: relative;
-    overflow: hidden;
+    /*Dev*/
+    *:hover {
+      outline: solid 1px red;
+    }
     
-    /*
-      center on wide screens, keep 40px margin on narrow displays
-    */
+    /* Positioning */
+    position: relative;
     margin: 0 0 50px 0;
-    @media screen and (min-width: $tabletBreakpoint) {
-      margin: 0 40px 100px 40px;
-    }
-    @media screen and (min-width: 946px) {
-      margin: 0 auto 100px auto;
-    }
+    padding-top: 336px;
+    
+    /* Appearance */
+    max-width: $desktopBreakpoint;
     
     .imageContainer {
+      /* Placement */
       position: absolute;
-      z-index: 0;
-      width: 100%;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      overflow: hidden;
+      
+      /* Appearance */
       
       .shapedShadow {
-        background: $colorFoundationDarkShaded;
-        box-shadow: inset 0 0 32px 32px $colorFoundationDark, inset 0 0 1px 1px $colorFoundationDark;
         /*
-          second box shadow needed to remove unwanted outline/edge due to border-radius
+          Positioning
         */
-        border-radius: 15%;
-
         width: 100%;
+        max-width: 434px;
         box-sizing: border-box;
-        padding-top: 35px;
-        margin-top: 5px;
+        padding: 22px 20px;
+
+        /* Appearance */
+        background: darken(desaturate($colorFoundationDark, 100%), 15%);
+        box-shadow: inset 0 0 22px 22px $colorFoundationDark, inset 0 0 1px 1px $colorFoundationDark; //second box shadow needed to remove unwanted outline/edge due to border-radius
+
+        $iPhoneMockupradius: 54px;
+        border-top-left-radius: $iPhoneMockupradius;
+        border-top-right-radius: $iPhoneMockupradius;
+
+        /* Hacks */
         text-align: center;
-        @media screen and (min-width: 434px) and (max-width: $tabletBreakpointInside) {
-          max-width: 434px; /* iPhone Screen + bezel in pixels. This translates to max. width of 100% real world. */
-          padding: 40px;
-          margin: 0 auto;
-        }
         
         img {
           width: 100%;
-          max-width: 354px;
+          margin: 0;
           height: auto;
-          
-          @media screen and (max-width: 469px) {
-            &.iPhoneMockup {
-              max-width: none;
-              width: 113.65%;
-              margin-left: -6.85%;
-            }
-          }
         }
       }
     }
     .content {
+      /* Placement */
       position: relative;
       z-index: 2;
-      margin-top: 360px;
-      padding: 40px;
+      margin: 0 $mobileInset;
+
+      /* Apprearance */
+      @include contentPadding;
       background: $colorFoundationBright;
       border-radius: $defaultBorderRadius;
-      box-shadow: 0 0 11px rgba(0, 0, 0, 0.3);
+      @include defaultBoxShadow;
       
       .buttonGroup {
         width: 100%;

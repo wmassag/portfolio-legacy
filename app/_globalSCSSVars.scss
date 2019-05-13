@@ -24,6 +24,19 @@ $colorContrastBase: #A61B14;
 $colorContrastInteraction: lighten($colorContrastBase, 15%);
 
 $defaultBorderRadius: 11px;
+$mobileInset: 8px;
+@mixin contentPadding {
+  padding: 30px;
+  @media screen and (min-width: $tabletBreakpoint) {
+    padding: 40px;
+  }
+}
+@mixin defaultBoxShadow {
+  box-shadow: 0 0 11px rgba(0, 0, 0, 0.3);
+  @media screen and (min-width: $tabletBreakpoint) {
+    box-shadow: 3px 5px 27px 0 rgba(0,0,0,0.33);
+  }
+}
 
 /*
   Linear gradient are ugly, this one is better.

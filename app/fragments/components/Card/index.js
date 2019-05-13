@@ -13,15 +13,14 @@ export default class Card extends React.Component {
     return(
       <div className="__Card">
         <div className="imageContainer">
-          <div className="shapedShadow">
-            {
-              (this.props.imageType === "iPhoneMockup") ? 
-                <img alt={this.props.imageAlt} src={this.props.imageURL} className="iPhoneMockup" />
-              :
-                <img alt={this.props.imageAlt} src={this.props.imageURL} />
-            }
-            
-          </div>
+        {
+          (this.props.imageType === "iPhoneMockup") ?
+            <div className="shapedShadow">
+              <img alt={this.props.imageAlt} src={this.props.imageURL} />
+            </div>
+          :
+            <img alt={this.props.imageAlt} src={this.props.imageURL} />
+        }
         </div>
         <div className="content">
           <h2>{this.props.title}</h2>
