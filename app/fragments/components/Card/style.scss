@@ -12,8 +12,7 @@
       position: absolute;
       z-index: 1;
       top: 0;
-      right: 0;
-      left: 0;
+      width: 100%;
       bottom: 0;
       overflow: hidden;
       
@@ -31,9 +30,9 @@
       .shapedShadow {
         /* Positioning */
         display: inline-block;
-        width: 100%;
-        box-sizing: border-box;
         padding: 22px 20px;
+        margin: 0 $mobileInset;
+        box-sizing: border-box;
 
         /* Appearance */
         background: darken(desaturate($colorFoundationDark, 100%), 15%);
@@ -73,8 +72,10 @@
      */
 
     @media screen and (min-width: $mobileBreakpoint) {
-      .shapedShadow {
-        padding: 40px 38px;
+      .imageContainer {
+        .shapedShadow {
+          margin: 0 $tabletInset;
+        }
       }
       .content {
         margin: 0 $tabletInset;
@@ -134,6 +135,9 @@
         overflow: visible;
         
         .shapedShadow {
+          /* Placement */
+          margin: 0;
+          
           /* Appearance */
           width: calc(100% + 38px);
           padding: 40px 38px;
