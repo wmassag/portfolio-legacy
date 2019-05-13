@@ -102,7 +102,7 @@
         position: absolute;
         bottom: 0;
         left: 0px;
-        right: 50%;
+        right: calc(50% - 76px); //Background blur -> 2x 38px, with 38px depending on .shapedShadow{width}
         z-index: 1;
         
         /* Appearance */
