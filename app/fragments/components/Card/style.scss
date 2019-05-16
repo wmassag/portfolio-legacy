@@ -173,7 +173,7 @@
       /* Appearance */
       max-width: $desktopBreakpoint;
     }
-    @media screen and (min-width: #{$desktopBreakpoint + $desktopInset}) {
+    @media screen and (min-width: #{$desktopBreakpoint + (2*$desktopInset)}) {
       margin-left: auto;
       margin-right: auto;
     }
