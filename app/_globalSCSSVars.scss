@@ -24,6 +24,10 @@ $mobileInset: 8px;
 $tabletInset: 40px;
 $desktopInset: 40px;
 
+$mobileSectionMarginBottom: 50px;
+$tabletSectionMarginBottom: 50px;
+$desktopSectionMarginBottom: 100px;
+
 @mixin contentPadding {
   padding: 30px;
   @media screen and (min-width: $tabletBreakpoint) {

@@ -31,7 +31,7 @@
         /* Positioning */
         display: inline-block;
         padding: 22px 20px;
-        margin: 0 $mobileInset;
+        margin: 25px $mobileInset $mobileSectionMarginBottom $mobileInset;
         box-sizing: border-box;
 
         /* Appearance */
@@ -74,7 +74,7 @@
     @media screen and (min-width: $mobileBreakpoint) {
       .imageContainer {
         .shapedShadow {
-          margin: 0 $tabletInset;
+          margin: 50px $tabletInset $tabletSectionMarginBottom $tabletInset;
         }
       }
       .content {
@@ -89,7 +89,7 @@
 
     @media screen and (min-width: $tabletBreakpoint) {
       /* Placement */
-      margin: 0 $desktopInset 150px $desktopInset;
+      margin: 50px $desktopInset $desktopSectionMarginBottom $desktopInset;
       
       /* Appearance */
       overflow: hidden;
