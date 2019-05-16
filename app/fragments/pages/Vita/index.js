@@ -36,6 +36,7 @@ export default class Vita extends React.Component {
           </aside>
           <article className="content" dangerouslySetInnerHTML={dangerousHTML()} />
         </section>
+        <div className="dirtyClearfix"> </div>
       </div>
     )
   }
