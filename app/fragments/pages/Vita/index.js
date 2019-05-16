@@ -24,6 +24,10 @@ export default class Vita extends React.Component {
             
     return(
       <div className="__Vita">
+        <div className="angledTransition">
+          <div className="left"></div>
+          <div className="right"></div>
+        </div>
         <section className="limiter">
           <h2 className="title">About Me</h2>
           <aside className="imageContainer">
@@ -36,3 +40,9 @@ export default class Vita extends React.Component {
     )
   }
 }
+
+/*
+  
+  1154:200
+  
+*/

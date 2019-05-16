@@ -4,7 +4,8 @@
   background-color: $colorFoundationBright;
   box-sizing: border-box;
   padding: 50px 0;
-  overflow: auto;
+  overflow: visible;
+  position: relative;
   
   .imageContainer {
     max-width: 100%;
@@ -63,6 +64,90 @@
     
     .overlayShadow {
       display: none;
+    }
+  }
+  
+  /* exceptions */
+  .angledTransition {
+    /* Placement */
+    z-index: 0;
+    position: absolute;
+    height: 100px;
+    top: -100px;
+    width: 100%;
+    
+    @media screen and (min-width: $mobileBreakpoint) {
+      height: 150px;
+      top: -150px;
+    }
+    
+    @media screen and (min-width: $tabletBreakpoint) {
+      height: 180px;
+      top: -180px;
+    }
+    
+    @media screen and (min-width: $desktopBreakpoint + $desktopInset * 2) {
+      $aspectRatioOfAngle: 16.7vw;
+      height: $aspectRatioOfAngle;
+      top: #{(-1) * $aspectRatioOfAngle};
+    }
+    
+    .left {
+      /* Placement */
+      display: block;
+      position: absolute;
+      top: 95px;
+      left: 0;
+      width: $mobileInset;
+      bottom: 0;
+      
+      @media screen and (min-width: $mobileBreakpoint) {
+        top: 135px;
+        width: $tabletInset;
+      }
+      
+      @media screen and (min-width: $tabletBreakpoint) {
+        top: 165px;
+        width: $desktopInset;
+      }
+      
+      @media screen and (min-width: $desktopBreakpoint + $desktopInset * 2) {
+        top: auto;
+        height: 5vw;
+        width: calc(50% - #{$desktopBreakpoint /2});
+      }
+      
+      /* Appearance */
+      background: linear-gradient(to bottom left,
+        $colorFoundationDark 49.8%,
+        $colorFoundationBright 50%
+      );
+    }
+    .right {
+      /* Placement */
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: $mobileInset;
+
+      @media screen and (min-width: $mobileBreakpoint) {
+        left: $tabletInset;
+      }
+      
+      @media screen and (min-width: $tabletBreakpoint) {
+        left: $desktopInset;
+      }
+      
+      @media screen and (min-width: $desktopBreakpoint + $desktopInset * 2) {
+        left: calc(50% - #{$desktopBreakpoint /2});
+      }
+      
+      /* Appearance */
+      background: linear-gradient(to bottom right,
+        $colorFoundationDark 49.8%,
+        $colorFoundationBright 50%
+      );
     }
   }
 }
