@@ -1,4 +1,5 @@
 import React from "react"
+import {Link} from "react-router-dom"
 
 require("./style.scss")
 
@@ -33,16 +34,10 @@ export default class Card extends React.Component {
               ))
             }
           </ul>
-            {(this.props.externalURL) ?
               <div className="buttonGroup">
-                <button>details</button>
-                <button className="bright">visit</button>
+                <Link to={(this.props.optionalPath) ? this.props.optionalPath : this.props.title}><button>details</button></Link>
+                {(this.props.externalURL) ? <a href={this.props.externalURL} target="_blank"><button className="bright">visit</button></a> : ""}
               </div>
-            :
-                <div className="buttonGroup">
-                  <button>details</button>
-                </div>
-            }
         </div>
         {(this.props.imageType === "iPhoneMockup") ? <div className="fader"></div> : "" }
       </div>
