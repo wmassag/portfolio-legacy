@@ -6,5 +6,7 @@
 #__proximity {
   min-height: 100vh;
   min-width: 100vw;
+  box-sizing: border-box;
+  @include contentPadding();
   background-color: $colorFoundationBright;
 }

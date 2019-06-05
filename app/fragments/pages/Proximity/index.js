@@ -55,9 +55,10 @@ export default class Layout extends React.Component {
             <p>{"[PLACEHOLDER FOR FLOATING SINGLE IMAGE]"}</p>
             <p>{"All icons are custom designed for this project, including the updates icon. This icon however is the only one implementing generative design, changing the number of circles, depending on the number of updates."}</p>
             <p>{"These are examples for none, some, many, and too many:"}</p>
-            <p>{"[PLACEHOLDER FOR RESPONSIVE SIDE-SCROLL GALLERY]"}</p>
+            <img className="float-left width-half" alt="Set of four icons, the first shwoing one large circle. The number of circles increases incrementally with each icon to symbolize an increasing number of updates. The last icon has thirteen differently sized circles, forming roughly the shape of one large circle." src="/static/proximity/rendered-all-states@3x.png" />
           </section>
         </article>
+        <div className="dirtyClearfix"><p><br /></p></div>
         <Link to="/#Proximity"><button className="bright">{"return to home"}</button></Link>
       </div>
     )

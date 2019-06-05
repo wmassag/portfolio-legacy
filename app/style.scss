@@ -117,14 +117,6 @@
         box-shadow: 0 0 6px rgba($colorFoundationDarkShaded, .24);
       }
     }
-    &.dark {
-      /*
-        default
-      */
-    }
-    &:hover, &:focus {
-      
-    }
   }
   input::-moz-focus-inner,
   button::-moz-focus-inner {
@@ -134,5 +126,38 @@
   
   .dirtyClearfix {
     clear: both;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    &.width-half {
+      @media screen and (min-width: $tabletBreakpoint) {
+        max-width: 50%;
+      }
+    }
+    &.float-left, &.float-right {
+      &.width-half {
+        @media screen and (min-width: $tabletBreakpoint) {
+          max-width: calc(50% - 1em);
+        }
+      }
+    }
+    &.float-left {
+      float: left;
+      &.width-half {
+        @media screen and (min-width: $tabletBreakpoint) {
+          margin-right: 1em;
+        }
+      }
+    }
+    &.float-right {
+      float: right;
+      &.width-half {
+        @media screen and (min-width: $tabletBreakpoint) {
+          margin-left: 1em;
+        }
+      }
+    }
   }
 }
