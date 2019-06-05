@@ -56,8 +56,9 @@
   .noWrap {
     white-space: nowrap;
   }
-  .emphasis {
+  .emphasis, em {
     font-weight: 700;
+    font-style: normal;
   }
   p {
     font-weight: 300;

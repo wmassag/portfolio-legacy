@@ -31,20 +31,20 @@ export default class Home extends React.Component {
         
         <Card
           title="CI + IT"
-          optionalPath="sapob"
+          optionalPath="noPath"
           externalURL="http://seeapotheke.de/"
           
           imageURL="static/sapob/render.png"
           imageAlt="A rendered mockup of the redesigned homepage for See-Apotheke on iPhone"
           imageType="iPhoneMockup"
           
-          description="Logo re-design, homepage, marketing materials, in-store displays and more for seeapotheke.de."
+          description="Re-designs for logo, homepage, marketing materials, in-store displays and more for seeapotheke.de."
           
           metaList={
-            ["CI & UX",
-            "Web UI and Code",
+            ["CI & UX digital and analog",
+            "Web UX and Code (Concrete5 CMS)",
             "Digital and print ads",
-            "Website content",
+            "Copy",
             "Server configuration"]
           }
         />

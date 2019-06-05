@@ -1,0 +1,10 @@
+@import "../../../_globalSCSSVars.scss";
+
+/*
+  Replace wrapper selector with component or page ID
+*/
+#__proximity {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: $colorFoundationBright;
+}
