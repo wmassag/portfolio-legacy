@@ -6,14 +6,19 @@ require("./style.scss")
 export default class Card extends React.Component {
   constructor(props){
     super(props)
-    
-    //more to come
+    this.referenceToCard = React.createRef()
+  }
+  
+  componentDidMount(){
+    if(window.location.hash == "#"+this.props.optionalPath || window.location.hash == "#"+this.props.title){
+      this.referenceToCard.current.scrollIntoView()
+    }
   }
   
   render(){
     return(
-      <div className="__Card">
-        <div className="imageContainer" id={(this.props.optionalPath && this.props.optionalPath != "noPath") ? this.props.optionalPath : this.props.title}>
+      <div className="__Card" ref={this.referenceToCard} id={(this.props.optionalPath && this.props.optionalPath != "noPath") ? this.props.optionalPath : this.props.title}>
+        <div className="imageContainer">
         {
           (this.props.imageType === "iPhoneMockup") ?
             <div className="shapedShadow">
