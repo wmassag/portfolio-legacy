@@ -2,8 +2,6 @@ import React from "react"
 
 require("./style.scss")
 
-import Page from "../../components/Page"
-
 export default class Layout extends React.Component {
   constructor(props){
     super(props)
