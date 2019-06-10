@@ -39,7 +39,7 @@
         background: darken(desaturate($colorFoundationDark, 100%), 15%);
         box-shadow: inset 0 0 22px 22px $colorFoundationDark, inset 0 0 1px 1px $colorFoundationDark; //second box shadow needed to remove unwanted outline/edge due to border-radius
 
-        $iPhoneMockupradius: 73px;
+        $iPhoneMockupradius: 16%;
         border-top-left-radius: $iPhoneMockupradius;
         border-top-right-radius: $iPhoneMockupradius;
       }
