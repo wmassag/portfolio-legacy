@@ -6,6 +6,7 @@
 
 import React from "react"
 import {Link} from "react-router-dom"
+import H2 from "../../components/H2"
 
 require("./style.scss")
 
@@ -18,7 +19,7 @@ export default class Layout extends React.Component {
   
   render(){
     return(
-      <div id="__proximity">
+      <div id="__proximity" className="bright">
         <h1>Proximity - 2018</h1>
         <article>
           <aside>{"🇩🇪 Eine deutsche Fassung ist als PDF Download verfügbar: Proximity Projekt-Dokumentatnion PDF (German)."}</aside>
@@ -27,8 +28,8 @@ export default class Layout extends React.Component {
           <p>{"I decided to dedicate this time to the conceptualization of a privacy first, locally connecting, social network, designed to be a gateway from the digital to the physical world and vice-versa. The heart of this concept is a mobile app. To fit the limited time frame I decided to limit myself to iOS on iPhone."}</p>
           <p>{"[COMPONENT FOR RESPONSIVE iPHONE SCREEN VIDEOS with descriptions] Description: Explore-tab, showing a map with the user's location and nearby points of interest, a notification and a pink wave emanating from the location of the POI."}</p>
           <section>
-            <h2>{"Why & What is Proximity?"}</h2>
-            <p><q>{"It is increasingly difficult – if not entirely impossible – to reach younger members of the community and to motivate them to be part of our decision-making process!"}</q>{"(translated from German, summarized). The words of an employee of the city painted a clear picture of the civic disconnect plaguing our communities. A group of my fellow students had just presented their civic-engagement platform-concept to a packed room. The statement by that city official got my attention, I had been pondering this problem for years and had experienced this first hand in my home town."}</p>
+            <H2 divided={true}>{"Why & What is Proximity?"}</H2>
+            <p><q>{"It is increasingly difficult – if not entirely impossible – to reach younger members of the community and to motivate them to be part of our decision-making process!"}</q> {"(translated from German, summarized). The words of an employee of the city painted a clear picture of the civic disconnect plaguing our communities. A group of my fellow students had just presented their civic-engagement platform-concept to a packed room. The statement by that city official got my attention, I had been pondering this problem for years and had experienced this first hand in my home town."}</p>
             <p>{"With local newspapers disappearing and younger people not reading them at all, connecting the city government and local business with the people is getting ever more challenging. To address the disconnect between city governments, local business and the people, I set out to design a digital product. Interviews with strangers on busy city streets and business owners lead me to postulate a location-based, social platform, linking the digital and the analog world in the palm of our hands: The idea for a smartphone-app was born."}</p>
           </section>
           <section>
