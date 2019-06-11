@@ -10,8 +10,12 @@ $primaryBright: $colorFoundationBright;
 $colorFoundationBrightShaded: #F5F2F2;
 $secondaryBright: $colorFoundationBrightShaded;
 
+$colorFoundationBrightContrast: #E0DEDE;
+
 $colorFoundationDark: #706B6B;
 $secondaryDark: $colorFoundationDark;
+
+$colorFoundationDarkContrast: #8C8685;
 
 $colorFoundationDarkShaded: #545050;
 $primaryDark: $colorFoundationDarkShaded;
@@ -33,6 +37,21 @@ $desktopSectionMarginBottom: 100px;
   @media screen and (min-width: $tabletBreakpoint) {
     padding: 40px;
   }
+}
+@mixin breakOutOfContentPaddingSideways {
+  margin-left: -30px;
+  margin-right: -30px;
+  @media screen and (min-width: $tabletBreakpoint){
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+}
+
+@mixin contentPaddingInline {
+  padding: 10px;
+}
+@mixin contentMarginInline {
+  margin: 1em;
 }
 @mixin defaultBoxShadow {
   box-shadow: 0 0 11px rgba(0, 0, 0, 0.3);
