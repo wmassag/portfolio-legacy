@@ -4,16 +4,13 @@
   Replace wrapper selector with component or page ID
 */
 .__H2 {
-  outline: solid red 1px;
   position: relative;
   text-align: center;
   .divided {
-    outline: solid blue 1px;
     display: inline;
     position: relative;
   }
   .box {
-    outline: solid green 1px;
     position: absolute;
     width: 100%;
     top: 0;
