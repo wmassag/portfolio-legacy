@@ -124,6 +124,22 @@
     padding: 0;
   }
   
+  blockquote {
+    @include contentPaddingInline();
+    @media screen and (max-width: $mobileBreakpointInside) {
+      padding-left: 4px;
+    }
+    
+    @include contentMarginInline();
+    @media screen and (max-width: $mobileBreakpointInside) {
+      margin-right: 0;
+    }
+  }
+  .bright blockquote, .dark blockquote { /* DARK MODE NOT DESIGNED */
+    background-color: $colorFoundationBrightShaded;
+    border-left: solid 6px $colorFoundationBrightContrast;
+  }
+  
   .dirtyClearfix {
     clear: both;
   }
