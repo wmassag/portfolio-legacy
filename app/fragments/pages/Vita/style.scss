@@ -1,6 +1,6 @@
 @import "../../../_globalSCSSVars.scss";
 
-.__Vita {
+#__Vita {
   background-color: $colorFoundationBright;
   box-sizing: border-box;
   padding: 50px 0;
@@ -9,12 +9,9 @@
   
   .imageContainer {
     max-width: 100%;
-    
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
+    height: 100vw;
+    background-size: cover;
+    background-position: center center;
   }
   .content, h2.title {
     margin-left: 40px;
@@ -52,14 +49,6 @@
       overflow: hidden;
       border-radius: $defaultBorderRadius;
       box-shadow: 0 0 17px rgba(0, 0, 0, 0.15);
-      
-      img {
-        width: auto;
-        height: 100%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-      }
     }
     
     .overlayShadow {
