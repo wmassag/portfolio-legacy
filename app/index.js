@@ -9,7 +9,7 @@ require("./style.scss")
 import Layout from "./fragments/pages/Layout/"
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename={(window.location.href.includes('github'))? "/portfolio" : ""}>
     <Layout />
   </BrowserRouter>,
   app

@@ -1,5 +1,5 @@
 import React from "react"
-import {BrowserRouter as Router, Route, Link, Switch} from "react-router-dom"
+import {BrowserRouter, Router, Route, Link, Switch} from "react-router-dom"
 
 require("./style.scss")
 
