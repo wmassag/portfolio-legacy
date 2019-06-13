@@ -53,6 +53,13 @@
     }
   }
   
+  @media screen and (min-width: $mobileBreakpoint) {
+    .limiter {
+      max-width: $desktopBreakpoint;
+      margin: 0 auto;
+    }
+  }
+  
   .noWrap {
     white-space: nowrap;
   }

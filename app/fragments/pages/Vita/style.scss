@@ -34,10 +34,6 @@
   }
   
   @media screen and (min-width: $mobileBreakpoint) {
-    .limiter {
-      max-width: $desktopBreakpoint;
-      margin: 0 auto;
-    }
     .imageContainer {
       width: 33%;
       height: 53vw;
