@@ -3,7 +3,7 @@
 /*
   Replace wrapper selector with component or page ID
 */
-.__H2 {
+.__Heading {
   position: relative;
   text-align: center;
   .divided {
@@ -25,8 +25,14 @@
   }
   .divider {
     position: absolute;
-    top: calc(50% - 3px);
-    height: 6px;
+    &.h1, &.h2 {
+      height: 6px;
+      top: calc(50% - 3px);
+    }
+    &.h3, &.h4, &.h5, &.h6 {
+      height: 3px;
+      top: calc(50% - 1.5px);
+    }
     width: 100%;
     background-color: $colorFoundationBrightContrast;
     .dark {
