@@ -140,6 +140,7 @@
     @include contentMarginInline();
     @media screen and (max-width: $mobileBreakpointInside) {
       margin-right: 0;
+      margin-left: 0;
     }
   }
   .bright blockquote, .dark blockquote { /* DARK MODE NOT DESIGNED */
