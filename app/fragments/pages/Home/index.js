@@ -31,7 +31,7 @@ export default class Home extends React.Component {
         
         <Card
           title="CI + IT"
-          optionalPath="noPath"
+          //optionalPath=
           externalURL="http://seeapotheke.de/"
           
           imageURL="static/sapob/render.png"

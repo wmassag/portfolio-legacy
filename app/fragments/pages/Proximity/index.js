@@ -61,7 +61,7 @@ export default class Layout extends React.Component {
             </section>
           </article>
           <div className="dirtyClearfix"><p><br /></p></div>
-          <Link to="/#Proximity"><button className="bright">{"return to home"}</button></Link>
+          <Link to="/"><button className="bright">{"return to home"}</button></Link>
         </div>
       </div>
     )
