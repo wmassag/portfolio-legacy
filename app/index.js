@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import {BrowserRouter} from "react-router-dom"
+import {HashRouter} from "react-router-dom"
 
 const app = document.getElementById('app')
 
@@ -9,8 +9,8 @@ require("./style.scss")
 import Layout from "./fragments/pages/Layout/"
 
 ReactDOM.render(
-  <BrowserRouter basename={(window.location.href.includes('github'))? "/portfolio" : ""}>
+  <HashRouter>
     <Layout />
-  </BrowserRouter>,
+  </HashRouter>,
   app
 );
