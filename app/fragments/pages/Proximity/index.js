@@ -13,8 +13,19 @@ require("./style.scss")
 export default class Layout extends React.Component {
   constructor(props){
     super(props)
-    window.scrollTo(0,0)
     //more to come
+  }
+  
+  componentWillUnmount(){
+    this.props.scrollSet("proximity", (window.pageYOffset || document.documentElement.scrollTop)  - (document.documentElement.clientTop || 0))
+  }
+  componentDidMount(){
+    let restoreScroll = (this.props.scrollGet("proximity"))?this.props.scrollGet("proximity"):0;
+    console.log(restoreScroll)
+    window.setTimeout(function(){
+      window.scrollTo(0, restoreScroll)
+      console.log(restoreScroll)
+    }, 50)
   }
   
   render(){

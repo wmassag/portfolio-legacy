@@ -13,6 +13,18 @@ export default class Home extends React.Component {
     //more to come
   }
   
+  componentWillUnmount(){
+    this.props.scrollSet("home", (window.pageYOffset || document.documentElement.scrollTop)  - (document.documentElement.clientTop || 0))
+  }
+  componentDidMount(){
+    let restoreScroll = (this.props.scrollGet("home"))?this.props.scrollGet("home"):0;
+    console.log(restoreScroll)
+    window.setTimeout(function(){
+      window.scrollTo(0, restoreScroll)
+      console.log(restoreScroll)
+    }, 50)
+  }
+  
   render(){
     return(
       <div id="__home">
@@ -31,7 +43,7 @@ export default class Home extends React.Component {
         
         <Card
           title="CI + IT"
-          //optionalPath=
+          optionalPath={false}
           externalURL="http://seeapotheke.de/"
           
           imageURL="static/sapob/render.png"

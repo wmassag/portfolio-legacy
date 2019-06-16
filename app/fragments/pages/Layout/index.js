@@ -10,15 +10,27 @@ export default class Layout extends React.Component {
   constructor(props){
     super(props)
     
-    //more to come
+    this.scrollingPositions = {};
+  }
+  
+  setScrollingPosition(path, value){
+    this.scrollingPositions[path] = value;
+    console.log("Stored scrolling position of " + path + " to: " + this.scrollingPositions[path])
+  }
+  getScrollingPosition(path){
+    return (this.scrollingPositions[path]) ? this.scrollingPositions[path] : false;
   }
   
   render(){
     return(
       <div id="__Layout">
         <Switch>
-          <Route exact path="/Proximity" component={Proximity} />
-          <Route exact path="/" component={Home} />
+          <Route exact path="/Proximity"
+            render={(props) => <Proximity {...props} scrollSet={(p, v) => this.setScrollingPosition(p, v)} scrollGet={(p) => this.getScrollingPosition(p)} />}
+          />
+          <Route exact path="/"
+            render={(props) => <Home {...props} scrollSet={(p, v) => this.setScrollingPosition(p, v)} scrollGet={(p) => this.getScrollingPosition(p)} />}
+          />
         </Switch>
       </div>
     )

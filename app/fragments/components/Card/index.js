@@ -34,7 +34,7 @@ export default class Card extends React.Component {
             }
           </ul>
               <div className="buttonGroup">
-                {(this.props.optionalPath != "noPath") ?
+                {(this.props.optionalPath != false) ?
                   <Link to={(this.props.optionalPath) ? this.props.optionalPath : this.props.title}><button>details</button></Link>
                 :
                   ""
