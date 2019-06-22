@@ -3,12 +3,13 @@
 #__Splash {
   position: relative;
   
-  width: calc(100vw - 65px);
+  width: calc(100vw - 40px);
   margin: 0 20px;
   padding: env(safe-area-inset);
+  box-sizing: border-box;
   
   @media screen and (min-width: $tabletBreakpoint) {
-    width: calc(100vw - 130px);
+    width: calc(100vw - 80px);
     margin: 0 40px;
   }
   
