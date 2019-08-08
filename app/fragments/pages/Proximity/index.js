@@ -14,7 +14,7 @@ require("./style.scss")
 export default class Layout extends React.Component {
   constructor(props){
     super(props)
-    //more to come
+    //More to come
   }
   
   componentWillUnmount(){
@@ -40,7 +40,7 @@ export default class Layout extends React.Component {
             <blockquote>{"Find something you want to make. Plan to use 30% of your time, for this project, during this semester (which has only four months!)"}</blockquote>
             <p>{"I decided to dedicate this time to the conceptualization of a privacy first, locally connecting, social network, designed to be a gateway from the digital to the physical world and vice-versa. The heart of this concept is a mobile app. To fit the limited time frame I decided to limit myself to iOS on iPhone."}</p>
           </div>
-          <ResponsiveScreencaptureVideoiPhone />
+          <ResponsiveScreencaptureVideoiPhone url={"https://vimeo.com/352701841"} device="XR XS_Max" />
             <p>{"Description: Explore-tab, showing a map with the user's location and nearby points of interest, a notification and a pink wave emanating from the location of the POI."}</p>
             <section>
               <div className="limiter">
