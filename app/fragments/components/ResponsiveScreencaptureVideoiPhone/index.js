@@ -45,9 +45,8 @@ export default class ResponsiveScreencaptureVideoiPhone extends React.Component 
     let overlay = this.deviceOverlayRef.current
     let player = this.playerRef.current
     if(overlay && player){
+      player.className = "player playerShow"
       window.setTimeout(function(){
-        player.className = "player playerShow"
-        
         // The following code uses percentages of the overlay image to determine the necessary padding for the video in relation to the overlay image at it's current size
         player.style.left = Math.floor(overlay.offsetLeft + (overlay.width * 0.05863539446)) + "px"; //55px of a total width of 938px
         player.style.top = Math.floor(overlay.offsetTop + (overlay.height * 0.02340425532)) + "px"; //44px of a total height of 1880px
