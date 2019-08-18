@@ -46,13 +46,21 @@ export default class ResponsiveScreencaptureVideoiPhone extends React.Component 
     let player = this.playerRef.current
     if(overlay && player){
       player.className = "player playerShow"
+      
+      //temporary placement and size, until containing element has been rendered and its dimensions can be read by JS
+      player.style.left = "0"
+      player.style.top = "0"
+      player.style.width = "0"
+      player.style.height = "0"
+      
+      //now size the player
       window.setTimeout(function(){
         // The following code uses percentages of the overlay image to determine the necessary padding for the video in relation to the overlay image at it's current size
         player.style.left = Math.floor(overlay.offsetLeft + (overlay.width * 0.05863539446)) + "px"; //55px of a total width of 938px
         player.style.top = Math.floor(overlay.offsetTop + (overlay.height * 0.02340425532)) + "px"; //44px of a total height of 1880px
         player.style.width = Math.ceil(overlay.width - (overlay.width * 0.1172707889)) + "px"
         player.style.height = Math.ceil(overlay.height - (overlay.height * 0.04680851064)) + "px"
-      }, 1)
+      }, 200)
     }else{
       console.error("Failed to identify device overlay image or video")
     }
