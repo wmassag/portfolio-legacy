@@ -8,6 +8,7 @@ import React from "react"
 import {Link} from "react-router-dom"
 import Heading from "../../components/Heading"
 import ResponsiveScreencaptureVideoiPhone from "../../components/ResponsiveScreencaptureVideoiPhone"
+import Gallery from "../../components/Gallery"
 
 require("./style.scss")
 
@@ -40,7 +41,7 @@ export default class Layout extends React.Component {
             <blockquote>{"Find something you want to make. Plan to use 30% of your time, for this project, during this semester (which has only four months!)"}</blockquote>
             <p>{"I decided to dedicate this time to the conceptualization of a privacy first, locally connecting, social network, designed to be a gateway from the digital to the physical world and vice-versa. The heart of this concept is a mobile app. To fit the limited time frame I decided to limit myself to iOS on iPhone."}</p>
           </div>
-          <ResponsiveScreencaptureVideoiPhone url={"https://vimeo.com/352701841"} device="XR XS_Max" />
+          <ResponsiveScreencaptureVideoiPhone url={"https://vimeo.com/352701841"} device="XR XS_Max" backdrop={[null]} />
             <p>{"Description: Explore-tab, showing a map with the user's location and nearby points of interest, a notification and a pink wave emanating from the location of the POI."}</p>
             <section>
               <div className="limiter">
@@ -57,7 +58,7 @@ export default class Layout extends React.Component {
                 <p>{"The explore-tab shows pins available for the user on a map – sometimes grouped, allowing for a quick zoom-in and back out to the previous zoom level (shown below). The map shows stores added by users or digital store windows, crowds of users choosing to share their locations, GPS-pinned chats, and info-points. Some pins may include a marked area. Users can save pins, subscribing them to be notified about changes. This allows for mobile businesses like food trucks to notify regular customers on their locaiton of the day."}</p>
                 <p>{"A special form of marker is the info-point. The one shown below was added by the city council for a construction site, info-points are among those markers, which may include an affected area."}</p>
               </div>
-              <p>{"[PLACEHOLDER FOR RESPONSIVE SIDE-SCROLL GALLERY]"}</p>
+              <Gallery images={[null]} backdrop={[null]} />
               <div className="limiter">
                 <p>{"Users of Proximity may choose to receive push-notifications or in-app updates for changes to the map around their current location and around their home. The subscription to this service is category-based, as some users may want to know about upcoming concerts, town hall meetings and information on the subway system, but aren't interested in raod construction or temporary parking notices."}</p>
               </div>
@@ -66,7 +67,7 @@ export default class Layout extends React.Component {
               <div className="limiter">
                 <Heading level="3" divided={true}>{"2. Browse"}</Heading>
               </div>
-              <p>{"[PLACEHOLDER FOR FLOATING SINGLE IMAGE]"}</p>
+              <Gallery images={[null]} backdrop={[null]}/>
               <div className="limiter">
                 <p>{"The browse tab includes one promotional section on the top, followed by a grid of stores and other points of interest, sorted by distance and filtered by user preference. Each grid item may be ½ display width or ¼ and can be square or have an aspect ration of 2:1. The size depends on popularity, however businesses have the opportunity to boost their tile size by keeping theit info up to date or paying a subscription."}</p>
                 <p>{"This tab allows users to 'scroll through their surroundings', without having to zoom out of a map or move a map around to see further in all directions. The further down the user scrolls, the farther away the stores and POIs are. To avoid having to scroll too far in locations with lot's of items on the map, the user has the option to filter."}</p>
@@ -77,12 +78,12 @@ export default class Layout extends React.Component {
               <div className="limiter">
                 <Heading level="3" divided={true}>{"3. Updates"}</Heading>
               </div>
-              <p>{"[PLACEHOLDER FOR FLOATING SINGLE IMAGE]"}</p>
+              <Gallery images={[null]} backdrop={[null]}/>
               <div className="limiter">
                 <p>{"The updates tab is separated into two distinct categories: Service updates and chats. On top are the service updates, updates reflecting a change in the user's surroundings, below are chat messages sorted by last cantact. The updates tab is a merge of the traditional notifications list and a messages list, deleting a chat from this list will trigger a confirmation dialog, asking to delete their chat history. There is no separation between updates and conversations."}</p>
                 <p>{"This mering of streams allows business chats to seamlessly integrate into the updates stream. A change to a saved pin was viewed as equally valuable as a direct or group message in surveys."}</p>
               </div>
-              <p>{"[PLACEHOLDER FOR FLOATING SINGLE IMAGE]"}</p>
+              <Gallery images={[null]} backdrop={[null]}/>
               <div className="limiter">
                 <p>{"All icons are custom designed for this project, including the updates icon. This icon however is the only one implementing generative design, changing the number of circles, depending on the number of updates."}</p>
                 <p>{"These are examples for none, some, many, and too many:"}</p>
