@@ -81,7 +81,7 @@ export default class ResponsiveScreencaptureVideoiPhone extends React.Component 
   
   render(){
     return(
-      <div className="__responsiveScreencaptureVideoiPhone" style={(this.props.backdrop)? {backgroundImage: "url('" + this.props.backdrop + "')"} : {background: "rgba(0,0,0,0.1)"}}>
+      <div className="__responsiveScreencaptureVideoiPhone" style={(this.props.backdrop && this.props.backdrop != null)? {backgroundImage: "url('" + this.props.backdrop + "')"} : {background: "rgba(0,0,0,0.1)"}}>
         <div className="container">
           <div className="player" ref={this.playerRef} >
             <ReactPlayer url={this.props.url} width="100%" height="100%" loop={true} />

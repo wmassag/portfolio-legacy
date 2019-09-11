@@ -56,7 +56,16 @@ $desktopSectionMarginBottom: 100px;
 @mixin defaultBoxShadow {
   box-shadow: 0 0 11px rgba(0, 0, 0, 0.3);
   @media screen and (min-width: $tabletBreakpoint) {
-    box-shadow: 3px 5px 27px 0 rgba(0,0,0,0.33);
+    box-shadow: 3px 5px 27px 0 rgba(0,0,0,0.3);
+  }
+}
+@mixin pngShadow {
+  //filter is extremely buggy in Safari, maybe don't use at all?
+  
+  filter: drop-shadow(0 0 11px rgba(0,0,0,0.3));
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#000')";
+  @media screen and (min-width: $tabletBreakpoint) {
+    filter: drop-shadow(0 0 27px rgba(0,0,0,0.3));    
   }
 }
 @mixin nonresponsiveBoxShadowMobile {
