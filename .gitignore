@@ -3,4 +3,4 @@ dist
 /static
 flow-typed
 coverage
-
+.DS_Store
